@@ -17,10 +17,12 @@ export class SignUnController implements Controller {
           return badRequest(new MissingParamError(field))
         }
       }
-      if (httpRequest.body.password !== httpRequest.body.passwordConfirmaton) {
+
+      const { email, password, passwordConfirmaton } = httpRequest.body
+      if (password !== passwordConfirmaton) {
         return badRequest(new InvalidParamError('passwordConfirmaton'))
       }
-      const isValid = this.emailValidator.isValid(httpRequest.body.email)
+      const isValid = this.emailValidator.isValid(email)
       if (!isValid) {
         return badRequest(new InvalidParamError('email'))
       }
