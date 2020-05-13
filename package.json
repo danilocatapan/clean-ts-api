@@ -27,6 +27,7 @@
     "@types/jest": "^25.2.1",
     "@types/mongodb": "^3.5.16",
     "@types/node": "^13.13.5",
+    "@types/supertest": "^2.0.9",
     "@types/validator": "^13.0.0",
     "@typescript-eslint/eslint-plugin": "^2.32.0",
     "eslint": "^7.0.0",
@@ -37,9 +38,10 @@
     "eslint-plugin-standard": "^4.0.1",
     "git-commit-msg-linter": "^2.4.2",
     "husky": "^4.2.5",
-    "jest": "^26.0.1",
+    "jest": "^25.5.4",
     "lint-staged": "^10.2.2",
     "sucrase": "^3.14.0",
+    "supertest": "^4.0.2",
     "ts-jest": "^25.5.1",
     "typescript": "^3.8.3"
   }
