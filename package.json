@@ -1,12 +1,12 @@
 {
   "name": "clean-node-api",
-  "version": "1.2.0",
+  "version": "1.1.0",
   "description": "NodeJs Rest API using TDD, Clean Architecture and Typescript",
   "scripts": {
     "start": "node dist/main/server.js",
     "build": "rimraf dist && tsc",
     "debug": "node --inspect=0.0.0.0:9222 --nolazy dist/main/server.js",
-    "up": "npm run build && docker-compose up",
+    "up": "npm run build && docker-compose up -d",
     "down": "docker-compose down",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand",
