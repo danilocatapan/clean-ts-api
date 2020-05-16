@@ -30,7 +30,7 @@ describe('Login Routes', () => {
           password: '123',
           passwordConfirmation: '123'
         })
-        .expect(500)// FIX HERE, RETURN 200 TODO
+        .expect(200)
     })
   })
 
