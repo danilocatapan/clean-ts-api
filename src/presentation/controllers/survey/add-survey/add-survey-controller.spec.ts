@@ -54,7 +54,7 @@ describe('AddSurvey Controller', () => {
     MockDate.set(date.getTime())
   })
 
-  beforeAll(() => {
+  afterAll(() => {
     MockDate.reset()
   })
 
