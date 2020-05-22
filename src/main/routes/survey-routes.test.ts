@@ -75,7 +75,7 @@ describe('Survey Routes', () => {
             answer: 'Answer 2'
           }]
         })
-        .expect(403) // 204, NÃO CONSEGUI IDENTIFICAR O ERRO, ALTEREI PARA CONTINUAR AS AULAS.
+        .expect(204)
     })
   })
 
@@ -86,12 +86,12 @@ describe('Survey Routes', () => {
         .expect(403)
     })
 
-    test('Should return 200 on load surveys with a valid accessToken', async () => {
+    test('Should return 204 on load surveys with a valid accessToken', async () => {
       const accessToken = await makeAccessToken()
       await request(app)
         .get('/api/surveys')
         .set('x-access-token', accessToken)
-        .expect(403) // 200, NÃO CONSEGUI IDENTIFICAR O ERRO, ALTEREI PARA CONTINUAR AS AULAS.
+        .expect(204)
     })
   })
 })
