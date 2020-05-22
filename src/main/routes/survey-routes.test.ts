@@ -73,4 +73,12 @@ describe('Survey Routes', () => {
         .expect(403) // 204, NÃO CONSEGUI IDENTIFICAR O ERRO, ALTEREI PARA CONTINUAR AS AULAS.
     })
   })
+
+  describe('GET /surveys', () => {
+    test('Should return 403 on load survey without accessToken', async () => {
+      await request(app)
+        .get('/api/surveys')
+        .expect(403)
+    })
+  })
 })
