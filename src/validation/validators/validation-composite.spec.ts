@@ -10,12 +10,12 @@ const makeValidation = (): Validation => {
   }
   return new ValidationStub()
 }
-interface SutType {
+type SutTypes = {
   sut: Validation
   validationStubs: Validation[]
 }
 
-const makeSut = (): SutType => {
+const makeSut = (): SutTypes => {
   const validationStubs = [makeValidation(), makeValidation()]
   const sut = new ValidationComposite(validationStubs)
   return {
