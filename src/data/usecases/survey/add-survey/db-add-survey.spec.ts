@@ -1,24 +1,8 @@
 import { DbAddSurvey } from './db-add-survey'
-import { AddSurveyParams, AddSurveyRepository } from './db-add-survey-protocols'
+import { AddSurveyRepository } from './db-add-survey-protocols'
+import { mockAddSurveyRepository } from '@/data/test'
+import { throwError, mockAddSurveyParams } from '@/domain/test'
 import MockDate from 'mockdate'
-
-const makeFakeSurveyData = (): AddSurveyParams => ({
-  question: 'any_question',
-  answers: [{
-    image: 'any_image',
-    answer: 'any_answer'
-  }],
-  date: new Date()
-})
-
-const makeAddSurveyRepository = (): AddSurveyRepository => {
-  class AddSurveyRepositoryStub implements AddSurveyRepository {
-    async add (surrveyData: AddSurveyParams): Promise<void> {
-      return new Promise(resolve => resolve())
-    }
-  }
-  return new AddSurveyRepositoryStub()
-}
 
 type SutTypes = {
   sut: DbAddSurvey
@@ -26,7 +10,7 @@ type SutTypes = {
 }
 
 const makeSut = (): SutTypes => {
-  const addSurveyRepositoyStub = makeAddSurveyRepository()
+  const addSurveyRepositoyStub = mockAddSurveyRepository()
   const sut = new DbAddSurvey(addSurveyRepositoyStub)
   return {
     sut,
@@ -46,15 +30,15 @@ describe('DbAddSurvey UserCase', () => {
   test('Should call AddSurveyRepository with corret values', async () => {
     const { sut, addSurveyRepositoyStub } = makeSut()
     const addSpy = jest.spyOn(addSurveyRepositoyStub, 'add')
-    const surveyData = makeFakeSurveyData()
+    const surveyData = mockAddSurveyParams()
     await sut.add(surveyData)
     expect(addSpy).toHaveBeenCalledWith(surveyData)
   })
 
   test('Should throw if AddSurveyRepositoy throws', async () => {
     const { sut, addSurveyRepositoyStub } = makeSut()
-    jest.spyOn(addSurveyRepositoyStub, 'add').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
-    const promise = sut.add(makeFakeSurveyData())
+    jest.spyOn(addSurveyRepositoyStub, 'add').mockImplementationOnce(throwError)
+    const promise = sut.add(mockAddSurveyParams())
     await expect(promise).rejects.toThrow()
   })
 })
