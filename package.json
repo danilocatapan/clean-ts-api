@@ -17,7 +17,7 @@
     "test:coveralls": "npm run test:ci && coveralls < coverage/lcov.info"
   },
   "author": "Danilo Catapan",
-  "license": "ISC",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "bcrypt": "^4.0.1",
     "express": "^4.17.1",
