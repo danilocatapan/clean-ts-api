@@ -1,4 +1,4 @@
-export const signupPath = {
+export const signUpPath = {
   post: {
     tags: ['Login'],
     summary: 'API para criar conta de um usuário',
