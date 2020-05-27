@@ -7,7 +7,7 @@ export const signUpPath = {
       content: {
         'application/json': {
           schema: {
-            $ref: '#/schemas/signupParams'
+            $ref: '#/schemas/signUpParams'
           }
         }
       }
