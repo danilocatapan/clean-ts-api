@@ -7,19 +7,27 @@ export default {
   info: {
     title: 'Clean Node API',
     description: 'Essa é a documentação da API feita pelo instrutor Rodrigo Manguinho no curso da Udemy de NodeJs usando Typescript, TDD, Clean Architecture e seguindo os princípios do SOLID e Design Patterns.',
-    version: '1.0.0'
-  },
-  license: {
-    name: 'GPL-3.0-or-later',
-    url: 'https://spdx.org/licenses/GPL-3.0-or-later.html'
+    version: '1.0.0',
+    contact: {
+      name: 'Danilo Rodrigues Catapan',
+      email: 'dcatapan@gmail.com',
+      url: 'https://www.linkedin.com/in/catapandanilo'
+    },
+    license: {
+      name: 'GPL-3.0-or-later',
+      url: 'https://spdx.org/licenses/GPL-3.0-or-later.html'
+    }
   },
   servers: [{
-    url: '/api'
+    url: '/api',
+    description: 'Servidor Principal'
   }],
   tags: [{
-    name: 'Login'
+    name: 'Login',
+    description: 'APIs relacionadas a Login'
   }, {
-    name: 'Enquete'
+    name: 'Enquete',
+    description: 'APIs relacionadas a Enquete'
   }],
   paths,
   schemas,
