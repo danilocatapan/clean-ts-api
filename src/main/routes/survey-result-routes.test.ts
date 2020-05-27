@@ -71,7 +71,7 @@ describe('Survey Routes', () => {
         .send({
           answer: 'Answer 1'
         })
-        .expect(403) // TODO DEVE SER 200
+        .expect(200)
     })
   })
 
@@ -98,7 +98,7 @@ describe('Survey Routes', () => {
       await request(app)
         .get(`/api/surveys/${res.ops[0]._id}/results`)
         .set('x-access-token', accessToken)
-        .expect(403) // TODO DEVE SER 200
+        .expect(200)
     })
   })
 })
