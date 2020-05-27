@@ -24,10 +24,6 @@ export class QueryBuilder {
     return this.addStep('$unwind', data)
   }
 
-  addFields (data: object): QueryBuilder {
-    return this.addStep('$addFields', data)
-  }
-
   lookup (data: object): QueryBuilder {
     return this.addStep('$lookup', data)
   }
