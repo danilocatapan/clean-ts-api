@@ -104,7 +104,7 @@ Uma API com uma arquitetura bem definida e desacoplada, utilizando TDD (programa
 * Middlewares
 * Nível de Acesso nas Rotas (Admin, User e Anônimo)
 * Deploy no Heroku
-* SErvir Arquivos Estáticos
+* Servir Arquivos Estáticos
 
 > ## Features do Git
 
