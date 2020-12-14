@@ -72,7 +72,7 @@ describe('AddSurvey Controller', () => {
     expect(httpResponse).toEqual(serverError(new Error()))
   })
 
-  test('Should return 204 on sucess', async () => {
+  test('Should return 204 on success', async () => {
     const { sut } = makeSut()
     const httpResponse = await sut.handle(mockRequest())
     expect(httpResponse).toEqual(noContent())
