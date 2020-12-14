@@ -21,7 +21,7 @@
   "author": "Danilo Catapan",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "module-alias": "^2.2.2",
