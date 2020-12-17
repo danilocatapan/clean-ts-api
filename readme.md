@@ -50,6 +50,7 @@ Uma API com uma arquitetura bem definida e desacoplada, utilizando TDD (programa
 * Abstract Server
 * Composition Root
 * Builder
+* Singleton
 
 > ## Metodologias e Designs
 
@@ -80,7 +81,8 @@ Uma API com uma arquitetura bem definida e desacoplada, utilizando TDD (programa
 * Faker
 * Coveralls
 * Validator
-* Express
+* Apollo Server Express
+* Graphql
 * Supertest
 * Husky
 * Lint Staged
@@ -98,6 +100,8 @@ Uma API com uma arquitetura bem definida e desacoplada, utilizando TDD (programa
 > ## Features do Node
 
 * Documentação de API com Swagger
+* API Rest com Express
+* GraphQL com Apollo Server
 * Log de Erro
 * Segurança (Hashing, Encryption e Encoding)
 * CORS
@@ -123,8 +127,10 @@ Uma API com uma arquitetura bem definida e desacoplada, utilizando TDD (programa
 * POO Avançado
 * Interface
 * TypeAlias
+* Namespace
 * Utility Types
 * Modularização de Paths
+* Configurações
 * Build
 * Deploy
 * Uso de Breakpoints
