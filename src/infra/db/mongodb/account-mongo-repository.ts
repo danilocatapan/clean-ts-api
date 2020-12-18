@@ -22,7 +22,7 @@ export class AccountMongoRepository implements
         _id: 1
       }
     })
-    return account != null
+    return account !== null
   }
 
   async loadByEmail (email: string): Promise<LoadAccountByEmailRepository.Result> {
