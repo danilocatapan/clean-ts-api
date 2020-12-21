@@ -96,6 +96,7 @@ Uma API com uma arquitetura bem definida e desacoplada, utilizando TDD (programa
 * Module-Alias
 * Copyfiles
 * Npm Check
+* Bson ObjectId
 
 > ## Features do Node
 
