@@ -27,7 +27,7 @@ export class LoadAnswersBySurveySpy implements LoadAnswersBySurvey {
   result = [faker.random.word(), faker.random.word()]
   id: string
 
-  async loadByAnswers (id: string): Promise<LoadAnswersBySurvey.Result> {
+  async loadAnswers (id: string): Promise<LoadAnswersBySurvey.Result> {
     this.id = id
     return this.result
   }

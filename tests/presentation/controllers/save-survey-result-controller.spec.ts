@@ -56,7 +56,7 @@ describe('SaveSurveyResult Controller', () => {
 
   test('Should return 500 if LoadAnswersBySurvey throws', async () => {
     const { sut, loadAnswersBySurveySpy } = makeSut()
-    jest.spyOn(loadAnswersBySurveySpy, 'loadByAnswers').mockImplementationOnce(throwError)
+    jest.spyOn(loadAnswersBySurveySpy, 'loadAnswers').mockImplementationOnce(throwError)
     const httpResponse = await sut.handle(mockRequest())
     expect(httpResponse).toEqual(serverError(new Error()))
   })
