@@ -83,6 +83,7 @@ Uma API com uma arquitetura bem definida e desacoplada, utilizando TDD (programa
 * Validator
 * Apollo Server Express
 * Graphql
+* Graphql ISO Date
 * Supertest
 * Husky
 * Lint Staged
@@ -110,6 +111,16 @@ Uma API com uma arquitetura bem definida e desacoplada, utilizando TDD (programa
 * Nível de Acesso nas Rotas (Admin, User e Anônimo)
 * Deploy no Heroku
 * Servir Arquivos Estáticos
+
+> ## Features do GraphQL
+
+* Types
+* Queries
+* Mutations
+* Resolvers
+* Directives
+* Scalars
+* Plugins
 
 > ## Features do Git
 
