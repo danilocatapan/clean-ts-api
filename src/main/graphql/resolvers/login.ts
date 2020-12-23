@@ -7,6 +7,6 @@ export default {
   },
 
   Mutation: {
-    singUp: async (parent: any, args: any) => adaptResolver(makeSignUpController(), args)
+    signUp: async (parent: any, args: any) => adaptResolver(makeSignUpController(), args)
   }
 }
