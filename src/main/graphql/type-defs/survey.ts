@@ -8,7 +8,7 @@ export default gql`
   type Survey {
     id: ID!
     question: String!
-    answer: [SurveyAnswer!]!
+    answers: [SurveyAnswer!]!
     date: DateTime!
     didAnswer: Boolean
   }
