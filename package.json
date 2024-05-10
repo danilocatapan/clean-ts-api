@@ -31,7 +31,7 @@
     "mongo-round": "^1.0.0",
     "mongodb": "^3.6.6",
     "nodemon": "^2.0.6",
-    "swagger-ui-express": "^4.1.5",
+    "swagger-ui-express": "^4.6.3",
     "validator": "^13.6.0"
   },
   "devDependencies": {
